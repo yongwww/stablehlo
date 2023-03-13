@@ -50,6 +50,11 @@ cmake -GNinja \
   -DLLVM_BUILD_TOOLS=OFF \
   -DLLVM_INCLUDE_TESTS=OFF \
   -DCMAKE_BUILD_TYPE=RelWithDebInfo \
-  -DLLVM_ENABLE_ASSERTIONS=On
+  -DLLVM_ENABLE_ASSERTIONS=ON \
+  -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+  -DCMAKE_CXX_COMPILER=clang++ \
+  -DCMAKE_CXX_COMPILER_LAUNCHER=ccache \
+  -DCMAKE_C_COMPILER=clang \
+  -DCMAKE_C_COMPILER_LAUNCHER=ccache
 
 cmake --build "$build_dir" --target all

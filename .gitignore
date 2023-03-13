@@ -7,3 +7,6 @@ llvm-project
 llvm-build
 .vscode
 .cache
+stablehlo-build
+stablehlo-python-build
+tvm
